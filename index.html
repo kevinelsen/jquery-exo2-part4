@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Bulletin de notes</title>
+</head>
+<body>
+  <script src="jquery-3.2.1.js"></script>
+  <input type="text" name="note1" value="" id="note1" />
+  <input type="text" name="note2" value="" id="note2" />
+  <input type="text" name="note3" value="" id="note3" />
+  <input type="text" name="note4" value="" id="note4" />
+  <input type="text" name="note5" value="" id="note5" />
+  <input type="submit" name="submit" value="valider" class="valid">
+  <script>
+  $('.valid').click(function(){
+    var note1 = $('#note1').val();
+    var note1 = $('#note2').val();
+    var note1 = $('#note3').val();
+    var note1 = $('#note4').val();
+    var note1 = $('#note5').val();
+
+    if(!isNaN(note1)) == true && ! isNaN(note2) == true && !isNaN(note3)) == true && !isNaN(note4)) == true && !isNaN(note5)) == true)
+    {
+      var result = (parseInt(note1)) + (parseInt(note2)) + (parseInt(note3)) + (parseInt(note4)) + (parseInt(note5))/5;
+      $('r').text(result);
+      if(result >= 0 && result < 10)
+      {
+        $('r').text(result + '\n Appréciation:En dessous de la moyenne');
+      }
+      if(result >= 10 && result < 13)
+      {
+        $('r').text(result + '\n Appréciation: Moyen');
+      }
+      if(result >= 13 && result < 16)
+      {
+        $('r').text(result + '\n Appréciation: Bien');
+      }
+      if(result >= 16 && result < 20)
+      {
+        $('r').text(result + '\n Appréciation: Très bien');
+      }
+      else if(result == 20)
+      {
+        $('r').text(result + '\n Appréciation:Excellent');
+      }
+    }
+  });
+  </script>
+</body>
+</html>
